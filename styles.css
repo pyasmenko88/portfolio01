@@ -128,7 +128,8 @@ body {
    WELCOME SECTION (avatar + text)
    =========================== */
 /* Мобильная версия (<768px) */
-section {
+/* Styles for the welcome section */
+.welcome {
   display: block;
   padding: 0 20px;
   margin-top: 20px;   /* добавили отступ сверху для мобилки */
@@ -141,21 +142,19 @@ section {
 }
 
 @media (max-width: 767px) {
-  section > h3 {
-    margin-top: 0;                          /* сброс «наложения» маржинов */
-  }
+  /* no custom margins for headings on mobile */
 }
 
 /* Десктоп (≥768px) */
 @media (min-width: 768px) {
-  section {
+  .welcome {
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-template-rows: auto auto auto;
     column-gap: 32px;
     max-width: 800px;
     padding: 0 80px;
-    margin-top: 40px;  /* добавили отступ сверху для десктопа */
+    margin-top: 60px;  /* отступ сверху на десктопе */
   }
 
   .welcome__avatar {
@@ -165,17 +164,16 @@ section {
     margin: 0;
   }
 
-  section > h3 {
+  .welcome > h3 {
     grid-column: 2;
     grid-row: 1;
-    margin: 0 0 0.5em;
   }
-  section > p {
+  .welcome > p {
     grid-column: 2;
     grid-row: 2;
     margin: 0 0 1em;
   }
-  section > a {
+  .welcome > a {
     grid-column: 2;
     grid-row: 3;
   }
@@ -233,3 +231,49 @@ section {
    max-width: 1440px;
    margin: 0 auto;
  }
+
+/* ===========================
+   PORTFOLIO SECTION
+   =========================== */
+.portfolio {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 40px auto 0;
+  box-sizing: border-box;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+}
+
+/* margin bottom for the Portfolio heading */
+.portfolio > h2 {
+  margin-bottom: 24px;
+}
+
+.portfolio-card__image {
+  background-color: var(--background-alt);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 32px;
+}
+
+
+@media (min-width: 768px) {
+  .portfolio {
+    padding: 0 80px;
+    margin-top: 60px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+
+  .portfolio > h2 {
+    margin-bottom: 32px;
+  }
+}
