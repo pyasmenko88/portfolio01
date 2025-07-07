@@ -252,14 +252,12 @@ body {
 .portfolio > h2 {
   margin-bottom: 24px;
 }
-
 .portfolio-card__image {
   background-color: var(--background-alt);
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 32px;
 }
-
 
 @media (min-width: 768px) {
   .portfolio {
@@ -272,7 +270,6 @@ body {
     column-gap: 24px;
     row-gap: 24px;
   }
-
   .portfolio > h2 {
     margin-bottom: 32px;
   }
