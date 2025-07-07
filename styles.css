@@ -254,10 +254,11 @@ section {
   background-color: var(--background-alt);
   width: 100%;
   aspect-ratio: 1 / 1;
+  border-radius: 32px;
 }
 
-.portfolio-card__title {
-  margin-top: 8px;
+.portfolio h3 {
+  margin: 0 0 32px;
 }
 
 @media (min-width: 768px) {
