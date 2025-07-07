@@ -248,6 +248,10 @@ body {
   row-gap: 16px;
 }
 
+/* margin bottom for the Portfolio heading */
+.portfolio > h2 {
+  margin-bottom: 24px;
+}
 .portfolio-card__image {
   background-color: var(--background-alt);
   width: 100%;
@@ -258,12 +262,15 @@ body {
 @media (min-width: 768px) {
   .portfolio {
     padding: 0 80px;
-margin-top: 60px;
+    margin-top: 60px;
   }
 
   .portfolio-grid {
     grid-template-columns: 1fr 1fr;
     column-gap: 24px;
     row-gap: 24px;
+  }
+  .portfolio > h2 {
+    margin-bottom: 32px;
   }
 }
