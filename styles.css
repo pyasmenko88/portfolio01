@@ -142,9 +142,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .welcome > h3 {
-    margin-top: 0;                          /* сброс «наложения» маржинов */
-  }
+  /* no custom margins for headings on mobile */
 }
 
 /* Десктоп (≥768px) */
@@ -156,7 +154,7 @@ body {
     column-gap: 32px;
     max-width: 800px;
     padding: 0 80px;
-    margin-top: 40px;  /* добавили отступ сверху для десктопа */
+    margin-top: 60px;  /* отступ сверху на десктопе */
   }
 
   .welcome__avatar {
@@ -169,7 +167,6 @@ body {
   .welcome > h3 {
     grid-column: 2;
     grid-row: 1;
-    margin: 0 0 0.5em;
   }
   .welcome > p {
     grid-column: 2;
@@ -258,13 +255,10 @@ body {
   border-radius: 32px;
 }
 
-.portfolio h3 {
-  margin: 0 0 32px;
-}
-
 @media (min-width: 768px) {
   .portfolio {
     padding: 0 80px;
+margin-top: 60px;
   }
 
   .portfolio-grid {
