@@ -157,7 +157,7 @@ body {
     grid-template-columns: 200px 1fr;
     grid-template-rows: auto auto auto;
     column-gap: 32px;
-    max-width: 800px;
+    max-width: 870px;
     padding: 0 80px;
     margin-top: 60px;  /* отступ сверху на десктопе */
   }
