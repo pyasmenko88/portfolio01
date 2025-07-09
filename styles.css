@@ -1,0 +1,281 @@
+:root {
+  --font-sans: 'Manrope', sans-serif;
+  /* Переменные ниже тут */
+}
+
+html,
+body {
+  margin: 0px auto;
+  font-family: var(--font-sans);
+  /* Убираем горизонтальные отступы у body */
+  padding: 0;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.site-header {
+  background: var(--background-body);      /* белый фон */
+  border-bottom: 1px solid var(--border);  /* тонкая серая линия */
+
+  /* — вот «хак», который растягивает шапку на весь viewport */
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.site-header__inner {
+  /* уже есть */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  height: 64px;
+
+  /* добавляем: */
+  max-width: 1440px;  /* пусть контент не шире 1440px */
+  margin: 0 auto;     /* центрируем внутри <header> */
+  width: 100%;        /* чтобы padding работал на всю ширину контейнера */
+}
+
+@media (min-width: 768px) {
+  .site-header__inner {
+    padding: 12px 80px;
+    /* max-width/margin остаются без изменений */
+  }
+}
+
+.logo-light { display: block; }
+.logo-dark { display: none; }
+
+/* При тёмной теме — прячем светлое и показываем тёмное */
+@media (prefers-color-scheme: dark) {
+  .logo-light { display: none; }
+  .logo-dark { display: block; }
+}
+
+/* Гарантируем, что лого остаётся в прежних размерах */
+.site-logo img {
+  display: block;
+  max-width: 163px;
+  height: auto;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--gray-700);
+}
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.site-nav {
+  display: none;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 9px 10px;
+  border-radius: 12px;
+}
+@media (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+/* 1) Делаем .site-logo флексом, чтобы центрировалось вертикально */
+.site-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* 2) Скрываем оба по умолчанию */
+.site-logo .logo-light,
+.site-logo .logo-dark {
+  display: none;
+  width: auto;
+  height: 16px;    /* фиксируем высоту, чтобы не «скакало» */
+}
+
+/* 3) Для светлой темы */
+@media (prefers-color-scheme: light) {
+  .site-logo .logo-light {
+    display: block;
+  }
+}
+
+/* 4) Для тёмной темы */
+@media (prefers-color-scheme: dark) {
+  .site-logo .logo-dark {
+    display: block;
+  }
+}
+
+
+
+/* ===========================
+   WELCOME SECTION (avatar + text)
+   =========================== */
+/* Мобильная версия (<768px) */
+/* Styles for the welcome section */
+.welcome {
+  display: block;
+  padding: 0 20px;
+  margin-top: 20px;   /* добавили отступ сверху для мобилки */
+}
+
+.welcome__avatar {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+/* remove the default top margin from the welcome heading */
+.welcome > h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  /* no custom margins for headings on mobile */
+}
+
+/* Десктоп (≥768px) */
+@media (min-width: 768px) {
+  .welcome {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 32px;
+    max-width: 870px;
+    padding: 0 80px;
+    margin-top: 60px;  /* отступ сверху на десктопе */
+  }
+
+  .welcome__avatar {
+    width: 200px;
+    height: 200px;
+    grid-row: 1 / span 3;
+    margin: 0;
+  }
+
+  .welcome > h3 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .welcome > p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0 0 1em;
+  }
+  .welcome > a {
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+
+/* ——————————————————————
+   DESKTOP NAV LINKS
+   —————————————————————— */
+@media (min-width: 768px) {
+  .site-nav a {
+    /* 1. текст medium */
+    font-weight: 500;
+
+    /* 2. border-radius 12px */
+    border-radius: 12px;
+
+    /* 4. плавный переход при наведении */
+    transition: background-color 0.2s ease;
+  }
+  .site-nav a:hover {
+    /* 3. при ховере — самый светлый серый фон */
+    background-color: var(--background);
+  }
+}
+
+/* ——————————————————————
+   BURGER BUTTON
+   —————————————————————— */
+ .nav-toggle {
+   /* 1) Сбросим любые внешние отступы */
+   margin: 0;
+
+   /* 2) Сделаем кнопку флексом, чтобы центрировать SVG */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   /* 3) Гарантируем минимум 40×40 области клика */
+   min-width: 40px;
+   min-height: 40px;
+
+   /* 4) Убираем только _лишние_ паддинги, остальное из water_mod.css */
+   padding: 0;
+
+   background-color: var(--background) !important;
+
+   /* 5) Скрываем на десктопе */
+   @media (min-width: 768px) {
+     display: none;
+   }
+ }
+
+ /* Вместо правок в body */
+ .wrapper {
+   max-width: 1440px;
+   margin: 0 auto;
+ }
+
+/* ===========================
+   PORTFOLIO SECTION
+   =========================== */
+.portfolio {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 40px auto 0;
+  box-sizing: border-box;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+}
+
+/* margin bottom for the Portfolio heading */
+.portfolio > h2 {
+  margin-bottom: 24px;
+}
+.portfolio-card__image {
+  background-color: var(--background-alt);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 32px;
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    padding: 0 80px;
+    margin-top: 60px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+  .portfolio > h2 {
+    margin-bottom: 32px;
+  }
+}
