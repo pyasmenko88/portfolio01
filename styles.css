@@ -9,6 +9,7 @@ body {
   font-family: var(--font-sans);
   /* Убираем горизонтальные отступы у body */
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 /* ===========================
