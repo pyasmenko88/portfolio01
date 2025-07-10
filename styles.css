@@ -279,3 +279,24 @@ body {
     margin-bottom: 32px;
   }
 }
+
+/* ===========================
+   CONTACTS SECTION
+   =========================== */
+.contacts {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 40px auto 0;
+  box-sizing: border-box;
+}
+
+.contacts > h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    padding: 0 80px;
+    margin-top: 60px;
+  }
+}
