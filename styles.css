@@ -274,7 +274,8 @@ body {
   right: 0;
   bottom: 0;
   padding: 8px;
-  background: linear-gradient(to top, var(--background) 0%, transparent 100%);
+
+  background: linear-gradient(to top, var(--button-hover) 0%, transparent 100%);
   color: #fff;
   box-sizing: border-box;
 }
