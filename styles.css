@@ -273,10 +273,11 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 8px;
-
+  padding: 20px;
   background: linear-gradient(to top, var(--button-hover) 0%, transparent 100%);
   color: #fff;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   box-sizing: border-box;
 }
 
@@ -291,7 +292,7 @@ body {
 
 @media (min-width: 768px) {
   .portfolio-card__overlay {
-    padding: 16px;
+padding: 32px;
     opacity: 0;
     transition: opacity 0.3s ease;
   }
