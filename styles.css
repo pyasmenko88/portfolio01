@@ -292,7 +292,7 @@ body {
 
 @media (min-width: 768px) {
   .portfolio-card__overlay {
-    padding: 32px;
+padding: 32px;
     opacity: 0;
     transition: opacity 0.3s ease;
   }
