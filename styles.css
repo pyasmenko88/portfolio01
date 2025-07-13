@@ -274,7 +274,11 @@ body {
   right: 0;
   bottom: 0;
   padding: 20px;
-  background: transparent;
+  background: linear-gradient(
+      to top,
+      rgba(17, 17, 17, 0.8) 0%,
+      rgba(17, 17, 17, 0) 100%
+    );
   color: #fff;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
