@@ -275,10 +275,10 @@ body {
   bottom: 0;
   padding: 20px;
   background: linear-gradient(
-      to top,
-      rgba(17, 17, 17, 0.8) 0%,
-      rgba(17, 17, 17, 0) 100%
-    );
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.6) 81%
+  );
   color: #fff;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
@@ -296,7 +296,7 @@ body {
 
 @media (min-width: 768px) {
   .portfolio-card__overlay {
-    padding: 32px;
+padding: 32px;
     opacity: 0;
     transition: opacity 0.3s ease;
   }
