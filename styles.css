@@ -273,7 +273,7 @@ body {
   left: 8px;
   right: 8px;
   bottom: 8px;
-  padding: 8px;
+  padding: 12px 16px;
   color: var(--text-main);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
@@ -303,7 +303,7 @@ body {
 
 @media (min-width: 768px) {
   .portfolio-card__overlay {
-    padding: 16px;
+padding: 12px 16px;
     left: 16px;
     right: 16px;
     bottom: 16px;
