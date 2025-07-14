@@ -307,13 +307,10 @@ body {
     left: 8px;
     right: 8px;
     bottom: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .portfolio-card:hover .portfolio-card__overlay {
     opacity: 1;
   }
+
+
 
   .title-desktop {
     display: block;
@@ -331,7 +328,11 @@ body {
   border-radius: inherit;
   display: block;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-card__image img {
+  transform: scale(1.02);
 }
 
 .portfolio-card__image::before {
