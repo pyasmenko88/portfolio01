@@ -133,13 +133,13 @@ body {
 .welcome {
   display: block;
   padding: 0 20px;
-  margin-top: 20px;   /* добавили отступ сверху для мобилки */
+  margin-top: 32px;   /* добавили отступ сверху для мобилки */
 }
 
 .welcome__avatar {
   width: 120px;
   height: 120px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 /* remove the default top margin from the welcome heading */
