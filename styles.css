@@ -271,7 +271,6 @@ body {
 @media (min-width: 768px) {
   .portfolio-card {
     max-width: 628px;
-    min-height: 628px;
   }
 }
 
