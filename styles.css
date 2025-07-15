@@ -296,11 +296,11 @@ body {
 
 .title-desktop {
   display: none;
-  margin: 0;
+  margin: 0 0 4px;
 }
 
 .title-mobile {
-  margin: 0;
+  margin: 0 0 4px;
 }
 
 @media (min-width: 768px) {
