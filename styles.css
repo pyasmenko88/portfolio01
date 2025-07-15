@@ -267,7 +267,7 @@ body {
   overflow: hidden;
   width: 100%;
   position: relative;
-  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -295,6 +295,18 @@ body {
   overflow: hidden;
 }
 
+.portfolio-card__image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--background-alt) 0%, var(--background) 50%, var(--background-alt) 100%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .title-desktop {
   display: none;
   margin: 0 0 4px;
@@ -320,12 +332,12 @@ body {
   object-fit: cover;
   display: block;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease;
 }
 
 
-.portfolio-card:hover {
-  transform: scale(1.02);
+.portfolio-card:hover .portfolio-card__image img {
+  transform: scale(1.05);
 }
 
 
@@ -333,6 +345,8 @@ body {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
+  pointer-events: none;
   background: linear-gradient(90deg, var(--background-alt) 0%, var(--background) 50%, var(--background-alt) 100%);
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s infinite;
@@ -340,6 +354,11 @@ body {
 }
 
 .portfolio-card.loaded::before {
+  opacity: 0;
+  animation: none;
+}
+
+.portfolio-card.loaded .portfolio-card__image::before {
   opacity: 0;
   animation: none;
 }
