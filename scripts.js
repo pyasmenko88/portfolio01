@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const containers = document.querySelectorAll('.portfolio-card__image');
-  containers.forEach((container) => {
-    const img = container.querySelector('img');
+  const cards = document.querySelectorAll('.portfolio-card');
+  cards.forEach((card) => {
+    const img = card.querySelector('.portfolio-card__image img');
     if (!img) return;
     function onLoad() {
-      container.classList.add('loaded');
+      card.classList.add('loaded');
     }
     if (img.complete) {
       onLoad();
