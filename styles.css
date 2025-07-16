@@ -414,3 +414,60 @@ body {
     margin-bottom: 60px;
   }
 }
+
+/* ===========================
+   MODAL
+   =========================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 100;
+}
+
+.modal-overlay.active {
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+  background: var(--background-body);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+  z-index: 101;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    top: 40px;
+  }
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-close img {
+  width: 24px;
+  height: 24px;
+}
