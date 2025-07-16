@@ -13,5 +13,28 @@ document.addEventListener('DOMContentLoaded', () => {
       img.addEventListener('error', onLoad);
     }
   });
+
+  const modal = document.getElementById('modal');
+  const overlay = document.getElementById('modal-overlay');
+  const closeBtn = document.getElementById('modal-close');
+
+  function openModal() {
+    modal.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  cards.forEach((card) => {
+    card.addEventListener('click', openModal);
+  });
+
+  overlay.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
 });
 
