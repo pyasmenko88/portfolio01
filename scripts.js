@@ -18,17 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.getElementById('modal-overlay');
   const closeBtn = document.getElementById('modal-close');
 
-  async function openModal(event) {
+  function openModal(event) {
     const card = event.currentTarget;
-    const src = card.getAttribute('data-modal-src');
-    if (src) {
-      try {
-        const response = await fetch(src);
-        const html = await response.text();
-        modal.querySelector('.modal-content').innerHTML = html;
-      } catch (e) {
-        modal.querySelector('.modal-content').innerHTML =
-          '<p>Не удалось загрузить данные</p>';
+    const templateId = card.getAttribute('data-modal-id');
+    if (templateId) {
+      const tmpl = document.getElementById(templateId);
+      if (tmpl) {
+        modal.querySelector('.modal-content').innerHTML = tmpl.innerHTML;
       }
     }
     modal.classList.add('active');

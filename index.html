@@ -55,7 +55,7 @@
       <section id="portfolio" class="portfolio">
         <!--<h2>Портфолио</h2> -->
         <div class="portfolio-grid">
-          <article class="portfolio-card" data-modal-src="cases/case-shop.html">
+          <article class="portfolio-card" data-modal-id="case-shop">
             <div class="portfolio-card__top">
               <h2 class="title-desktop">Кейсы МТС Shop</h2>
               <p class="title-desktop">Поиск, корзина, кешбэк, ребрендинг,<br>переход на дизайн-систему</p>
@@ -66,7 +66,7 @@
               <img src="https://files.catbox.moe/1zfzax.png" alt="МТС" loading="lazy" />
             </div>
           </article>
-          <article class="portfolio-card" data-modal-src="cases/case-generative.html">
+          <article class="portfolio-card" data-modal-id="case-generative">
             <div class="portfolio-card__top">
               <h2 class="title-desktop">Генеративная графика</h2>
               <p class="title-desktop">Примеры генераций по заданному стилю<br>и синтетические стоковые фото</p>
@@ -77,7 +77,7 @@
               <img src="https://files.catbox.moe/6njpp7.png" alt="Пример работы" loading="lazy" />
             </div>
           </article>
-          <article class="portfolio-card" data-modal-src="cases/case-mytoys.html">
+          <article class="portfolio-card" data-modal-id="case-mytoys">
             <div class="portfolio-card__top">
               <h2 class="title-desktop">myToys</h2>
               <p class="title-desktop">Приложение для интернет-<br>магазина myToys</p>
@@ -88,7 +88,7 @@
               <img src="https://files.catbox.moe/6jwmr8.png" alt="myToys" loading="lazy" />
             </div>
           </article>
-          <article class="portfolio-card" data-modal-src="cases/case-aic.html">
+          <article class="portfolio-card" data-modal-id="case-aic">
             <div class="portfolio-card__top">
               <h2 class="title-desktop">Редизайн магазина</h2>
               <p class="title-desktop">Редизайн веб версии интернет-<br>магазина МТС со студией AIC</p>
@@ -120,6 +120,31 @@
       <p>Подзаголовок</p>
     </div>
   </div>
+
+  <template id="case-shop">
+    <h2>Кейсы МТС Shop</h2>
+    <p>Поиск, корзина, кешбэк, ребрендинг, переход на дизайн-систему</p>
+    <img src="https://files.catbox.moe/1zfzax.png" alt="МТС Shop" />
+  </template>
+
+  <template id="case-generative">
+    <h2>Генеративная графика</h2>
+    <p>Примеры генераций с заданным стилем и синтетические стоковые фото</p>
+    <img src="https://files.catbox.moe/6njpp7.png" alt="Пример работы" />
+  </template>
+
+  <template id="case-mytoys">
+    <h2>myToys</h2>
+    <p>Приложение для интернет-магазина myToys</p>
+    <img src="https://files.catbox.moe/6jwmr8.png" alt="myToys" />
+  </template>
+
+  <template id="case-aic">
+    <h2>Редизайн магазина</h2>
+    <p>Редизайн веб версии интернет-магазина МТС со студией AIC</p>
+    <img src="https://files.catbox.moe/g8isgp.png" alt="Пример работы" />
+  </template>
+
 
   <script src="scripts.js"></script>
  </body>
