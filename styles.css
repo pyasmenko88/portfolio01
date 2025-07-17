@@ -459,15 +459,35 @@ body {
 
 .modal-close {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #e0e0e0;
+  border-radius: 8px;
 }
 
 .modal-close img {
-  width: 24px;
-  height: 24px;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  z-index: 1;
+}
+
+.modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
 }
