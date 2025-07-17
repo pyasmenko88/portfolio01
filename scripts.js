@@ -18,7 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.getElementById('modal-overlay');
   const closeBtn = document.getElementById('modal-close');
 
-  function openModal() {
+  async function openModal(event) {
+    const card = event.currentTarget;
+    const src = card.getAttribute('data-modal-src');
+    if (src) {
+      try {
+        const response = await fetch(src);
+        const html = await response.text();
+        modal.querySelector('.modal-content').innerHTML = html;
+      } catch (e) {
+        modal.querySelector('.modal-content').innerHTML =
+          '<p>Не удалось загрузить данные</p>';
+      }
+    }
     modal.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
