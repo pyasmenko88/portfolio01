@@ -460,7 +460,7 @@ body {
 .modal-close {
   position: absolute;
   top: 20px;
-  right: 12px;
+  right: 16px;
   width: 52px;
   height: 52px;
   background: none;
@@ -470,6 +470,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .modal-close::before {
