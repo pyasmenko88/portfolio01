@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         function onImgLoad() {
           img.classList.add('loaded');
         }
-
         if (img.complete && img.naturalWidth !== 0) {
           onImgLoad();
         } else {
