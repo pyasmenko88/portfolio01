@@ -529,4 +529,18 @@ body {
 .modal-content img {
   margin-top: 17px;
   margin-bottom: 17px;
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background: linear-gradient(90deg, var(--background-alt) 0%, var(--background) 50%, var(--background-alt) 100%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.modal-content img.loaded {
+  opacity: 1;
+  animation: none;
+  background: none;
 }
