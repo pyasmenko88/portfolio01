@@ -533,6 +533,7 @@ body {
   height: auto;
   display: block;
   opacity: 0;
+  min-height: 200px;
   transition: opacity 0.3s ease-in-out;
   background: linear-gradient(90deg, var(--background-alt) 0%, var(--background) 50%, var(--background-alt) 100%);
   background-size: 200% 100%;
@@ -541,6 +542,7 @@ body {
 
 .modal-content img.loaded {
   opacity: 1;
+  min-height: 0;
   animation: none;
   background: none;
 }
