@@ -21,13 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
   function openModal(event) {
     const card = event.currentTarget;
     const id = card.getAttribute('data-modal-id');
-    if (id) {
-      const template = document.getElementById(id);
-      if (template) {
-        modal.querySelector('.modal-content').innerHTML = template.innerHTML;
+      if (id) {
+        const template = document.getElementById(id);
+        if (template) {
+          modal.querySelector('.modal-content').innerHTML = template.innerHTML;
+        }
       }
-    }
-    modal.classList.add('active');
+
+      if (window.innerWidth < 768) {
+        const firstHeading = modal.querySelector('.modal-content h1');
+        if (firstHeading) {
+          const h2 = document.createElement('h2');
+          h2.innerHTML = firstHeading.innerHTML;
+          firstHeading.replaceWith(h2);
+        }
+      }
+
+      modal.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
