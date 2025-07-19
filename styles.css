@@ -446,7 +446,7 @@ body {
   background: var(--background-body);
   border-radius: 40px 40px 0 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 0 20px;
   box-sizing: border-box;
   transform: translateY(100%);
   opacity: 0;
@@ -457,7 +457,7 @@ body {
 
 @media (min-width: 768px) {
   .modal {
-    padding: 40px;
+    padding: 0 40px;
   }
 }
 
@@ -488,7 +488,7 @@ body {
   content: "";
   position: absolute;
   inset: 4px;
- background: var(--background);
+  background: var(--background);
   border-radius: 8px;
 }
 
@@ -500,7 +500,7 @@ body {
 }
 
 .modal-content {
-  max-height: 80vh;
+  max-height: 95vh;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
