@@ -443,6 +443,10 @@ body {
   margin: 0 auto;
   width: 100%;
   max-width: 1024px;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background: var(--background-body);
   border-radius: 40px 40px 0 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -500,10 +504,11 @@ body {
 }
 
 .modal-content {
-  max-height: 95vh;
+  flex: 1 1 auto;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  overscroll-behavior: contain;
 }
 .modal-content::-webkit-scrollbar {
   display: none;
