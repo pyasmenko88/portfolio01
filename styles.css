@@ -439,9 +439,9 @@ body {
   width: 100%;
   max-width: 1024px;
   background: var(--background-body);
-  border-radius: 16px;
+  border-radius: 40px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 0px 40px;
   box-sizing: border-box;
   display: none;
   z-index: 101;
@@ -459,8 +459,8 @@ body {
 
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 28px;
+  right: 24px;
   width: 40px;
   height: 40px;
   background: none;
@@ -473,23 +473,24 @@ body {
   color: var(--text-bright);
   transition: transform var(--animation-duration) ease;
 }
-
 .modal-close:hover {
   transform: scale(1.02);
+=======
+  margin: 0;
 }
 
 .modal-close::before {
   content: "";
   position: absolute;
   inset: 4px;
-  background: var(--background);
+ background: var(--background);
   border-radius: 8px;
 }
 
 .modal-close__icon {
   position: relative;
-  width: 10px;
-  height: 10px;
+  width: 32px;
+  height: 32px;
   z-index: 1;
 }
 
