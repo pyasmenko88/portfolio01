@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         function onImgLoad() {
           img.classList.add('loaded');
         }
-        if (img.complete && img.naturalWidth !== 0) {
+        if (img.complete) {
           onImgLoad();
         } else {
-          img.addEventListener('load', onImgLoad, { once: true });
-          img.addEventListener('error', onImgLoad, { once: true });
+          img.addEventListener('load', onImgLoad);
+          img.addEventListener('error', onImgLoad);
         }
       });
 
