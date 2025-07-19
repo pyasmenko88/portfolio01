@@ -37,14 +37,14 @@ body {
   height: 64px;
 
   /* добавляем: */
-  max-width: 1440px;  /* пусть контент не шире 1440px */
+  max-width: 1280px;  /* пусть контент не шире 1280px */
   margin: 0 auto;     /* центрируем внутри <header> */
   width: 100%;        /* чтобы padding работал на всю ширину контейнера */
 }
 
 @media (min-width: 768px) {
   .site-header__inner {
-    padding: 12px 80px;
+    padding: 12px 20px;
     /* max-width/margin остаются без изменений */
   }
 }
@@ -132,7 +132,7 @@ body {
 /* Styles for the welcome section */
 .welcome {
   display: block;
-  padding: 0 20px;
+  padding: 0;
   margin-top: 32px;   /* добавили отступ сверху для мобилки */
 }
 
@@ -159,7 +159,7 @@ body {
     grid-template-rows: auto auto auto;
     column-gap: 32px;
     max-width: 870px;
-    padding: 0 80px;
+    padding: 0;
     margin-top: 60px;  /* отступ сверху на десктопе */
   }
 
@@ -235,16 +235,18 @@ body {
 
  /* Вместо правок в body */
  .wrapper {
-   max-width: 1440px;
+   max-width: 1280px;
    margin: 0 auto;
+   padding: 0 20px;
+   box-sizing: border-box;
  }
 
 /* ===========================
    PORTFOLIO SECTION
    =========================== */
 .portfolio {
-  padding: 0 20px;
-  max-width: 1440px;
+  padding: 0;
+  max-width: 1280px;
   margin: 40px auto 0;
   box-sizing: border-box;
 }
@@ -378,7 +380,7 @@ body {
 
 @media (min-width: 768px) {
   .portfolio {
-    padding: 0 80px;
+    padding: 0;
     margin-top: 70px;
   }
 
@@ -396,8 +398,8 @@ body {
    CONTACTS SECTION
    =========================== */
 .contacts {
-  padding: 0 20px;
-  max-width: 1440px;
+  padding: 0;
+  max-width: 1280px;
   margin: 40px auto 0;
   box-sizing: border-box;
   margin-bottom: 60px;
@@ -409,7 +411,7 @@ body {
 
 @media (min-width: 768px) {
   .contacts {
-    padding: 0 80px;
+    padding: 0;
     margin-top: 60px;
     margin-bottom: 60px;
   }
