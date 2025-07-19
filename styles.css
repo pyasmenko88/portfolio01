@@ -514,7 +514,11 @@ body {
   display: none;
 }
 
-.modal-content h1,
 .modal-content h2 {
   margin-top: 40px;
+}
+
+.modal-content img {
+  margin-top: 17px;
+  margin-bottom: 17px;
 }
