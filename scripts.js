@@ -28,6 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
+      const images = modal.querySelectorAll('.modal-content img');
+      images.forEach((img) => {
+        function onImgLoad() {
+          img.classList.add('loaded');
+        }
+
+        if (img.complete && img.naturalWidth !== 0) {
+          onImgLoad();
+        } else {
+          img.addEventListener('load', onImgLoad, { once: true });
+          img.addEventListener('error', onImgLoad, { once: true });
+        }
+      });
+
       if (window.innerWidth < 768) {
         const firstHeading = modal.querySelector('.modal-content h1');
         if (firstHeading) {
