@@ -484,8 +484,8 @@ body {
 
 .modal-close__icon {
   position: relative;
-  width: 10px;
-  height: 10px;
+  width: 32px;
+  height: 32px;
   z-index: 1;
 }
 
