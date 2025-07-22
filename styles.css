@@ -542,7 +542,7 @@ body {
 
 .modal-content img.loaded {
   opacity: 1;
-  min-height: 0;
+  min-height: 200px;
   animation: none;
   background: none;
 }
