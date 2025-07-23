@@ -550,7 +550,7 @@ body {
   height: auto;
   display: block;
   opacity: 1;
-  border-radius: 32px;
+  border-radius: 24px;
   object-fit: cover;
   transition: opacity 0.3s ease-in-out;
   background: linear-gradient(90deg, var(--background-alt) 0%, var(--background) 50%, var(--background-alt) 100%);
