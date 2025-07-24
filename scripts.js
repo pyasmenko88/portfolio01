@@ -62,6 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeModal() {
     modal.classList.remove('active');
     overlay.classList.remove('active');
+    const content = modal.querySelector('.modal-content');
+    if (content) {
+      content.scrollTop = 0;
+    }
     document.body.style.overflow = '';
   }
 
