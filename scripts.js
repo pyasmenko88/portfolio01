@@ -18,6 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const iframes = document.querySelectorAll('.video-wrapper iframe');
+  iframes.forEach((iframe) => {
+    iframe.addEventListener('load', () => {
+      iframe.parentElement.classList.add('loaded');
+    });
+  });
+
   const modal = document.getElementById('modal');
   const overlay = document.getElementById('modal-overlay');
   const closeBtn = document.getElementById('modal-close');
