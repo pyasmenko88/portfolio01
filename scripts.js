@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  if (!localStorage.getItem('visited')) {
-    document.body.classList.add('intro-animate');
-    localStorage.setItem('visited', 'true');
-  }
   const cards = document.querySelectorAll('.portfolio-card');
   cards.forEach((card) => {
     const img = card.querySelector('.portfolio-card__image img');
