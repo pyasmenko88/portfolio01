@@ -14,6 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const avatar = document.querySelector('.welcome__avatar');
+  if (avatar) {
+    function onAvatarLoad() {
+      avatar.classList.add('loaded');
+    }
+    if (avatar.complete) {
+      onAvatarLoad();
+    } else {
+      avatar.addEventListener('load', onAvatarLoad);
+      avatar.addEventListener('error', onAvatarLoad);
+    }
+  }
+
   const modal = document.getElementById('modal');
   const overlay = document.getElementById('modal-overlay');
   const closeBtn = document.getElementById('modal-close');
