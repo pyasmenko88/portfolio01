@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('modal-close');
 
   function openModal(event) {
+    event.preventDefault();
     const card = event.currentTarget;
     const id = card.getAttribute('data-modal-id');
       if (id) {
@@ -81,6 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
   cards.forEach((card) => {
     card.addEventListener('click', openModal);
   });
+
+  const resumeLink = document.querySelector('.resume-link');
+  if (resumeLink) {
+    resumeLink.addEventListener('click', openModal);
+  }
 
   overlay.addEventListener('click', closeModal);
   closeBtn.addEventListener('click', closeModal);
