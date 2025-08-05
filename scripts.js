@@ -83,11 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('click', openModal);
   });
 
-  const resumeLink = document.querySelector('.resume-link');
-  if (resumeLink) {
-    resumeLink.addEventListener('click', openModal);
-  }
-
   overlay.addEventListener('click', closeModal);
   closeBtn.addEventListener('click', closeModal);
 });
