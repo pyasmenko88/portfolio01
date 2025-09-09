@@ -1,5 +1,68 @@
+@font-face {
+  font-family: 'Vela Sans';
+  src: url('./Font/VelaSans-ExtraLight.woff2') format('woff2'),
+       url('./Font/VelaSans-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vela Sans';
+  src: url('./Font/VelaSans-Light.woff2') format('woff2'),
+       url('./Font/VelaSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vela Sans';
+  src: url('./Font/VelaSans-Regular.woff2') format('woff2'),
+       url('./Font/VelaSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vela Sans';
+  src: url('./Font/VelaSans-Medium.woff2') format('woff2'),
+       url('./Font/VelaSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vela Sans';
+  src: url('./Font/VelaSans-SemiBold.woff2') format('woff2'),
+       url('./Font/VelaSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vela Sans';
+  src: url('./Font/VelaSans-Bold.woff2') format('woff2'),
+       url('./Font/VelaSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vela Sans';
+  src: url('./Font/VelaSans-ExtraBold.woff2') format('woff2'),
+       url('./Font/VelaSans-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --font-sans: 'Manrope', sans-serif;
+  --font-sans: 'Vela Sans', sans-serif;
   /* Переменные ниже тут */
 }
 
