@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+  function updateViewportHeight() {
+    document.documentElement.style.setProperty(
+      '--app-viewport-height',
+      `${window.innerHeight}px`
+    );
+  }
+
+  updateViewportHeight();
+  window.addEventListener('resize', updateViewportHeight);
+
   const cards = document.querySelectorAll('.portfolio-card');
   cards.forEach((card) => {
     const img = card.querySelector('.portfolio-card__image img');
